@@ -1,0 +1,21 @@
+{
+  "name": "rabsanaco/contracts",
+  "description": "All contracts of rabsanaco",
+  "type": "library",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Sajjad30sakhti",
+      "email": "info.rabsana@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Rabsanaco\\Contracts\\": ""
+    }
+  }
+}
