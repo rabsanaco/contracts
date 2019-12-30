@@ -9,12 +9,12 @@
 namespace Rabsanaco\Contracts\UI\Widgets;
 
 
-abstract class Column extends Container
+abstract class Heading extends Container
 {
-    protected $size = null;
+    protected $size;
 
     /**
-     * Column constructor.
+     * Heading constructor.
      * @param $size
      */
     public function __construct($size)
@@ -37,8 +37,6 @@ abstract class Column extends Container
     {
         $this->size = $size;
     }
-
-
 
 
 }

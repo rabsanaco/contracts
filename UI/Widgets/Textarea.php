@@ -9,22 +9,18 @@
 namespace Rabsanaco\Contracts\UI\Widgets;
 
 
-abstract class Input extends Component
+abstract class Textarea extends Input
 {
     protected $name;
-    protected $type;
     protected $label;
     protected $placeholder;
     protected $value;
-    protected $description;
-    protected $readOnly = false;
 
-    public function __construct($name, $label = '', $placeholder = '', $type = 'text')
+    public function __construct($name, $label = '', $placeholder = '')
     {
         $this->name = $name;
         $this->label = $label;
         $this->placeholder = $placeholder;
-        $this->type = $type;
     }
 
     /**
@@ -76,22 +72,6 @@ abstract class Input extends Component
     }
 
     /**
-     * @return string
-     */
-    public function getType(): string
-    {
-        return $this->type;
-    }
-
-    /**
-     * @param string $type
-     */
-    public function setType(string $type): void
-    {
-        $this->type = $type;
-    }
-
-    /**
      * @return mixed
      */
     public function getValue()
@@ -106,40 +86,6 @@ abstract class Input extends Component
     {
         $this->value = $value;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * @param mixed $description
-     */
-    public function setDescription($description): void
-    {
-        $this->description = $description;
-    }
-
-    /**
-     * @return bool
-     */
-    public function isReadOnly(): bool
-    {
-        return $this->readOnly;
-    }
-
-    /**
-     * @param bool $readOnly
-     */
-    public function setReadOnly(bool $readOnly): void
-    {
-        $this->readOnly = $readOnly;
-    }
-
-
 
 
 

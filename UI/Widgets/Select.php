@@ -9,22 +9,22 @@
 namespace Rabsanaco\Contracts\UI\Widgets;
 
 
-abstract class Input extends Component
+abstract class Select extends Component
 {
     protected $name;
-    protected $type;
+    protected $options;
     protected $label;
     protected $placeholder;
     protected $value;
     protected $description;
-    protected $readOnly = false;
+    protected $disabled = false;
 
-    public function __construct($name, $label = '', $placeholder = '', $type = 'text')
+    public function __construct($name, $label = '', $placeholder = '', $options = [])
     {
         $this->name = $name;
         $this->label = $label;
         $this->placeholder = $placeholder;
-        $this->type = $type;
+        $this->options = $options;
     }
 
     /**
@@ -76,19 +76,19 @@ abstract class Input extends Component
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getType(): string
+    public function getOptions()
     {
-        return $this->type;
+        return $this->options;
     }
 
     /**
-     * @param string $type
+     * @param mixed $options
      */
-    public function setType(string $type): void
+    public function setOptions($options): void
     {
-        $this->type = $type;
+        $this->options = $options;
     }
 
     /**
@@ -126,19 +126,18 @@ abstract class Input extends Component
     /**
      * @return bool
      */
-    public function isReadOnly(): bool
+    public function isDisabled(): bool
     {
-        return $this->readOnly;
+        return $this->disabled;
     }
 
     /**
-     * @param bool $readOnly
+     * @param bool $disabled
      */
-    public function setReadOnly(bool $readOnly): void
+    public function setDisabled(bool $disabled): void
     {
-        $this->readOnly = $readOnly;
+        $this->disabled = $disabled;
     }
-
 
 
 

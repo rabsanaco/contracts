@@ -35,35 +35,24 @@ interface Builder
      */
     public function createPage();
 
-
-    /**
-     * @return Page
-     */
-    public function getPage();
-
-    public function setPage(Page $page);
-
     public function createHeader();
-
-    public function getHeader();
-
-    public function setHeader(Header $header);
 
     public function createFooter();
 
-    public function getFooter();
-
-    public function setFooter(Footer $footer);
-
-    public function createSidebar();
-
-    public function getSidebar();
-
-    public function setSidebar(Sidebar $sidebar);
+    public function createNavigation();
 
     public function createContent();
 
+    public function addToContent(Graphic $graphic);
+
+    public function getPage();
+
+    public function getHeader();
+
+    public function getFooter();
+
+    public function getNavigation();
+
     public function getContent();
 
-    public function setContent(Content $content);
 }

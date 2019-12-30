@@ -9,36 +9,17 @@
 namespace Rabsanaco\Contracts\UI\Widgets;
 
 
-abstract class Alert extends Component
+abstract class Text extends Component
 {
-    protected $type;
     protected $content;
 
     /**
-     * Alert constructor.
-     * @param $type
+     * Text constructor.
      * @param $content
      */
-    public function __construct($content, $type)
+    public function __construct($content)
     {
-        $this->type = $type;
         $this->content = $content;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getType()
-    {
-        return $this->type;
-    }
-
-    /**
-     * @param mixed $type
-     */
-    public function setType($type): void
-    {
-        $this->type = $type;
     }
 
     /**
@@ -56,7 +37,6 @@ abstract class Alert extends Component
     {
         $this->content = $content;
     }
-
 
 
 }

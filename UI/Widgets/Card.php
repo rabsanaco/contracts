@@ -9,7 +9,7 @@
 namespace Rabsanaco\Contracts\UI\Widgets;
 
 
-abstract class Breadcrumb extends Component
+abstract class Card extends Container
 {
     protected $title;
 

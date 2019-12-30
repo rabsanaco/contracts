@@ -9,22 +9,19 @@
 namespace Rabsanaco\Contracts\UI\Widgets;
 
 
-abstract class Input extends Component
+abstract class Checkbox extends Component
 {
     protected $name;
-    protected $type;
     protected $label;
-    protected $placeholder;
     protected $value;
     protected $description;
     protected $readOnly = false;
+    protected $checked = false;
 
-    public function __construct($name, $label = '', $placeholder = '', $type = 'text')
+    public function __construct($name, $label = '')
     {
         $this->name = $name;
         $this->label = $label;
-        $this->placeholder = $placeholder;
-        $this->type = $type;
     }
 
     /**
@@ -59,37 +56,7 @@ abstract class Input extends Component
         $this->label = $label;
     }
 
-    /**
-     * @return string
-     */
-    public function getPlaceholder(): string
-    {
-        return $this->placeholder;
-    }
 
-    /**
-     * @param string $placeholder
-     */
-    public function setPlaceholder(string $placeholder): void
-    {
-        $this->placeholder = $placeholder;
-    }
-
-    /**
-     * @return string
-     */
-    public function getType(): string
-    {
-        return $this->type;
-    }
-
-    /**
-     * @param string $type
-     */
-    public function setType(string $type): void
-    {
-        $this->type = $type;
-    }
 
     /**
      * @return mixed
@@ -138,6 +105,24 @@ abstract class Input extends Component
     {
         $this->readOnly = $readOnly;
     }
+
+    /**
+     * @return bool
+     */
+    public function isChecked(): bool
+    {
+        return $this->checked;
+    }
+
+    /**
+     * @param bool $checked
+     */
+    public function setChecked(bool $checked): void
+    {
+        $this->checked = $checked;
+    }
+
+
 
 
 
